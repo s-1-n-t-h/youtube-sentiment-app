@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/styles/home_page.css">
+    <title>Prediction Page</title>
+</head>
+<body>
+    <nav>
+       <div>
+           <img src='../static/images/youtube-logo.png' alt="logo-youtube">
+           <h1> <span id="s1">YT Video</span>  <span id="s2"> Sentiment </span> <span id="s3"> Analyser</span></h1>
+       </div>
+   </nav>
+
+    <h3>VIDEO SELECTED</h3>
+
+    <iframe src="https://www.youtube.com/embed/{{vid}}" class='frame'></iframe>
+    <br><br><br>
+
+        <h3>PREDICTED SENTIMENT ANALYIS</h3>
+
+    <table border="8px" cellspacing="15px" cellpadding="5px" align="center">
+        <tr>
+            <th>S.No</th>
+            <th>Sentiment Type</th>
+            <th>% of Sentiment Observed</th>
+        </tr>
+        {% for i in range(length1) %}
+            <tr> 
+                <td>{{table1[0][i]}}</td>
+                <td>{{table1[1][i]}}</td>
+                <td>{{table1[2][i]}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+    <br><br><br>
+
+    
+
+    <h3>LANGUAGES DETECTED</h3>
+        
+    <table border="8px" cellspacing="15px" cellpadding="5px" align="center">
+        <tr>
+            <th>S.No</th>
+            <th>COMMENT SCRAPED</th>
+            <th>LANGUAGE</th>
+        </tr>
+        {% for i in range(length3) %}
+            <tr> 
+                <td>{{table4[0][i]}}</td>
+                <td>{{table4[1][i]}}</td>
+                <td>{{table4[2][i]}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+    <br><br><br>
+
+    <h3>COMMENTS SCRAPED ( PRE-TRANSLATION )</h3>
+
+    <table border="8px" cellspacing="15px" cellpadding="5px" align="center">
+        <tr>
+            <th>S.No</th>
+            <th>COMMENT SCRAPED</th>
+            <th>LANGUAGE</th>
+        </tr>
+        {% for i in range(length2) %}
+            <tr> 
+                <td>{{table2[0][i]}}</td>
+                <td>{{table2[1][i]}}</td>
+                <td>{{table2[2][i]}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+    <br><br><br>
+
+    <h4> TRANSLATED COMMENTS ( POST-TRANSLATION & PREDICTION )</h4>
+
+    <table border="8px" cellspacing="15px" cellpadding="5px" align="center">
+        <tr>
+            <th>S.No</th>
+            <th>COMMENT TRANSLATED</th>
+            <th>SENTIMENT</th>
+        </tr>
+        {% for i in range(length2) %}
+            <tr> 
+                <td>{{table3[0][i]}}</td>
+                <td>{{table3[1][i]}}</td>
+                <td>{{table3[2][i]}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+    
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="../static/styles/home_page.css">
+</head>
+<body background="images/LaunchNewAccount_v1.gif" >
+   <nav>
+       <div>
+           <img src='../static/images/youtube-logo.png' height='50' width='50' alt="">
+           <h1> <span id="s1">YT Video</span>  <span id="s2"> Sentiment </span> <span id="s3"> Analyser</span></h1>
+       </div>
+   </nav>
+   <div id="form-box">
+       <form action="/prediction" align="center" method="post">
+            <input type="url" name="video-url" id="url-box" placeholder="Enter a Youtube Video URL">
+            <br><br><br>
+            <input type="submit" value="Predict Sentiment" id="go-btn">
+       </form>
+   </div>
+</body>
+</html>
